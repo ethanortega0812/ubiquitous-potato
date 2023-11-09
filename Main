@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+
+        GoodStudent alan = new GoodStudent("Alan", "Turing", "Big Al", 191254, 3.56, true);
+        GoodStudent florence = new GoodStudent("Florence", "Nightingale", 182010, 3.89, false);
+        GoodStudent grace = new GoodStudent("Grace", "Hopper", "Queen Bee", 190692, 3.99, true);
+
+        System.out.println(alan + "\n");
+        System.out.println(florence + "\n");
+        System.out.println(grace);
+    }
+}

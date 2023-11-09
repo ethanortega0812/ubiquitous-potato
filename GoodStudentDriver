@@ -1,0 +1,37 @@
+public class GoodStudentDriver 
+{
+    public static void main(String[] args) 
+    {
+        GoodStudent alan = new GoodStudent("Alan", "Turing", "Big Al", 191254, 3.56, true);
+        GoodStudent florence = new GoodStudent("Florence", "Nightingale", 182010, 3.89, false);
+        GoodStudent grace = new GoodStudent("Grace", "Hopper", "Queen Bee", 190692, 3.99, true);
+
+        System.out.println("Initial Information:");
+        System.out.println(alan.toString());
+
+        florence.setNickname("Flo-No");
+        florence.setGpa(3.92);
+
+        System.out.println("\nUpdated Information for Florence:");
+        System.out.println("Nickname: " + florence.getNickname());
+        System.out.println("GPA: " + florence.getGpa());
+
+        System.out.println("\nInformation for Grace:");
+        System.out.println("First Name: " + grace.getFirstName());
+        System.out.println("CS Status: " + grace.isCS());
+
+        System.out.println("\nCreateID() for all three:");
+        System.out.println("Alan: " + alan.createID());
+        System.out.println("Florence: " + florence.createID());
+        System.out.println("Grace: " + grace.createID());
+
+        System.out.println("\nCSGPA() for all three:");
+        System.out.println("Alan's Boosted GPA: " + alan.csGpa());
+        System.out.println("Florence's Boosted GPA: " + florence.csGpa());
+        System.out.println("Grace's Boosted GPA: " + grace.csGpa());
+    }
+}
+
+
+
+

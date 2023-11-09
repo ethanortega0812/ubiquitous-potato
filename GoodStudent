@@ -1,0 +1,92 @@
+public class GoodStudent 
+{
+    private String firstName;
+    private String lastName;
+    private String nickname;
+    private int idNumber;
+    private double gpa;
+    private boolean isCS;
+
+    // Constructors
+    public GoodStudent(String firstName, String lastName, String nickname, int idNumber, double gpa, boolean isCS) 
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nickname = nickname;
+        this.idNumber = idNumber;
+        this.gpa = gpa;
+        this.isCS = isCS;
+    }
+
+    public GoodStudent(String firstName, String lastName, int idNumber, double gpa, boolean isCS) {
+        this(firstName, lastName, "", idNumber, gpa, isCS);
+    }
+
+    public GoodStudent(String firstName, String lastName, int idNumber, double gpa) 
+    {
+        this(firstName, lastName, "", idNumber, gpa, false);
+    }
+
+    // toString method
+    public String toString() 
+    {
+        return "Name: " + firstName + " " + lastName + "\nNickname: " + nickname +
+                "\nID: " + idNumber + "\nGPA: " + gpa + "\nCS Student: " + isCS;
+    }
+
+    // Getters and Setters
+    public String getFirstName()
+     {
+        return firstName;
+    }
+
+    public String getLastName() 
+    {
+        return lastName;
+    }
+
+    public String getNickname() 
+    {
+        return nickname;
+    }
+
+    public int getIdNumber() 
+    {
+        return idNumber;
+    }
+
+    public double getGpa() 
+    {
+        return gpa;
+    }
+
+    public boolean isCS() {
+        return isCS;
+    }
+
+    public void setNickname(String nickname) 
+    {
+        this.nickname = nickname;
+    }
+
+    public void setGpa(double gpa) 
+    {
+        if (gpa >= 0 && gpa <= 4.0) {
+            this.gpa = gpa;
+        }
+    }
+
+    // Brain methods
+    public String createID() 
+    {
+        return Character.toLowerCase(firstName.charAt(0)) + lastName.toLowerCase() + Integer.toString(idNumber).substring(2);
+    }
+
+    public double csGpa() 
+    {
+        if (isCS) {
+            return gpa * 1.15;
+        }
+        return gpa;
+    }
+}
